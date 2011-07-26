@@ -1,0 +1,20 @@
+/*
+ * This is the partial to be used for exceptions handled as the result of xhr actions
+ *
+ * where 'message' is the text from <%=file_name%>_error.rb
+ *
+ */
+jQuery('body').append('<div id="errational_error_dialog"></div>');
+jQuery('#errational_error_dialog')
+        .html('<%%= message %>')
+        .dialog(
+            {
+                minHeight: 'auto',
+                height: 'auto',
+                modal: true,
+                dialogClass: 'errational_class',
+                title: 'Error!',
+                resizable: false,
+                width: 450
+            }
+        );
