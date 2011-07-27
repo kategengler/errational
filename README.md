@@ -86,6 +86,7 @@ must be defined as children of their parent module's generated class.
 
 
 Example:
+
 ```ruby
  module ApplicationException
    include Errationalify
