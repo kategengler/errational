@@ -1,0 +1,22 @@
+Supports Rails 3 only
+
+This gem will create custom Exception classes for your rails app,
+rescue from them whenever they are raised, and display a nice message to the user.
+
+== Install
+
+Add to your Gemfile:
+
+gem 'errational'
+
+== Run Generators
+
+rails generate errational:install <app_name>
+
+= This will generate three files, there is documentation within the generated files:
+== lib/errational/<app_name>_error.rb
+== lib/errational/<app_name>_exception.rb
+== config/initializers/errational_configuration.rb
+
+
+

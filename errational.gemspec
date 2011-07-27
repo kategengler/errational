@@ -8,13 +8,13 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Kate Gengler", "Brian Olore"]
   s.email       = ["errational@surrationale.net"]
-  s.homepage    = ""
   s.summary     = %q{A gem for nice exception handling.}
   s.description = %q{Nice error handling}
 
   s.rubyforge_project = "errational"
 
-  s.files         = Dir.glob("**/*")
+  s.files         = `git ls-files`.split("\n")
+  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_paths = ["lib"]
 
 end
