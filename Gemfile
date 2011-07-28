@@ -4,6 +4,6 @@ source "http://rubygems.org"
 gemspec
 
 gem "rake", "0.8.7"
-gem "rails", "3.0.7"
+gem "rails", "~> 3.0"
 gem "mocha", '0.9.12', :require => false
 
