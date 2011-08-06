@@ -15,7 +15,17 @@ module Errationality
     if request.xhr?
       render :partial => Errational.error_partial, :status => Errational.error_response_code, :locals => {:message => message}
     else
-      render :text => message, :status => Errational.error_response_code
+      respond_to do |format|
+        format.text do
+          render :text => message, :status => Errational.error_response_code
+        end
+        format.html do
+          render :text => message, :status => Errational.error_response_code
+        end
+        format.json do
+          render :json => message, :status => Errational.error_response_code
+        end
+      end
     end
   end
 

@@ -9,7 +9,15 @@ class TestApplicationController < ApplicationController
   end
 
   def index
-    render :text => "hello"
+    respond_to do |format|
+      format.text do
+        render :text => "hello"
+      end
+
+      format.json do
+        render :json => {:blah =>'foo'}
+      end
+    end
   end
 end
 
@@ -32,6 +40,12 @@ class ErrationalityTest < ActionController::TestCase
     @controller.stubs(:blah).raises(RuntimeError)
     get :index
     assert_match /#{Errational.error_base::UNEXPECTED}/, @response.body
+  end
+
+  def test_should_render_error_in_format_requested
+    @controller.stubs(:blah).raises(RuntimeError)
+    get :index, :format => :json
+    assert_equal("application/json", @response.content_type)
   end
 
   def test_should_have_error_response_code_for_full_request
