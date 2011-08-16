@@ -1,3 +1,3 @@
 module Errational
-  VERSION = "0.7.1"
+  VERSION = "0.8.16"
 end

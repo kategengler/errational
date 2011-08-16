@@ -6,7 +6,7 @@
  */
 jQuery('body').append('<div id="errational_error_dialog"></div>');
 jQuery('#errational_error_dialog')
-        .html('<%%= message %>')
+        .html('<%%= message.html_safe %>')
         .dialog(
             {
                 minHeight: 'auto',
