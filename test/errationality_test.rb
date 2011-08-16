@@ -63,7 +63,7 @@ class ErrationalityTest < ActionController::TestCase
   def test_handle_exception_renders_error_dialog_partial
     @controller.stubs(:blah).raises(RuntimeError)
     xhr :get, :index
-    assert_match /new ErrorDialog.*#{Errational.error_base::UNEXPECTED}/, @response.body
+    assert_match /#{Errational.error_base::UNEXPECTED}/, @response.body
   end
 
   def test_handle_unexpected_exception_handles_general_exceptions_raises_tac_retry_message_and_logs
@@ -71,6 +71,13 @@ class ErrationalityTest < ActionController::TestCase
     @controller.expects(:handle_exception).with(Errational.error_base::UNEXPECTED)
     @controller.expects(:log_exception).with(new_exception)
     @controller.send(:handle_unexpected_exception, new_exception)
+  end
+
+  def test_messages_are_html_safe_as_default
+    new_exception = RailsAppException::HtmlMessage
+    @controller.stubs(:blah).raises(new_exception)
+    xhr :get, :index
+    assert_match /#{RailsAppError::HTML_MESSAGE}/, @response.body
   end
 
   private

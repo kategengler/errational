@@ -10,6 +10,7 @@ Gem::Specification.new do |s|
   s.email       = ["errational@surrationale.net"]
   s.summary     = %q{A gem for nice exception handling.}
   s.description = %q{Nice error handling}
+  s.homepage    = "https://github.com/kategengler/errational"
 
   s.rubyforge_project = "errational"
 

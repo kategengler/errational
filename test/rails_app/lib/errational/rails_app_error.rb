@@ -4,7 +4,7 @@
 # For example, where Application is the name of the application:
 # module ApplicationError
 #   module General
-#     UNEXPECTED = "An error has occured in the application. Please try again."
+#     UNEXPECTED = "An error has occurred in the application. Please try again."
 #   end
 #   module Loggable
 #     SERVICE_FAULT = "The response from the service cannot be processed. Please try again"
@@ -40,9 +40,9 @@ module RailsAppError
     UNEXPECTED = "An error has occurred with your last request. Please try again."
   end
 
-  #Errors in this module will be logged
+  #Errors in this special module will be logged
   module Loggable
-    LOG_THIS = "This is a really bad error. Tell someone!"
+    HTML_MESSAGE = "A<br />message<br />with<br />html<br />!"
   end
 
 

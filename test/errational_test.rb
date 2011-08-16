@@ -13,11 +13,11 @@ class ErrationalTest < ActiveSupport::TestCase
   end
 
   def test_error_base_name
-    assert_equal Errational.error_base_name, "RailsAppError"
+    assert_equal "RailsAppError", Errational.error_base_name
   end
 
   def test_exception_base_name
-    assert_equal Errational.exception_base_name, "RailsAppException"
+    assert_equal "RailsAppException", Errational.exception_base_name
   end
 
   def test_error_base

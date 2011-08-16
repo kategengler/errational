@@ -3,7 +3,7 @@
 # Exception classes that override generated exception classes must be defined as children of their parent module's generated class.
 # Example:
 # module ApplicationException
-#   include ErrorHandlingClass
+#   include Errationalify
 #
 #   class ServiceFault < Loggable
 #     def initialize(service_name)
@@ -13,7 +13,7 @@
 # end
 # module ApplicationError
 #   module General
-#     UNEXPECTED = "An error has occured in the application. Please try again."
+#     UNEXPECTED = "An error has occurred in the application. Please try again."
 #   end
 #   module Loggable
 #     SERVICE_FAULT = "The response from %s cannot be processed. Please try again"
