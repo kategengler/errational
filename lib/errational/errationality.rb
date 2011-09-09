@@ -13,7 +13,7 @@ module Errationality
 
   def render_error(message)
     if request.xhr?
-      render :partial => Errational.error_partial, :status => Errational.error_response_code, :locals => {:message => message}
+      render :partial => Errational.error_partial, :status => Errational.error_response_code, :locals => {:message => message}, :content_type => "text/javascript"
     else
       respond_to do |format|
         format.text do
