@@ -1,9 +1,10 @@
-require 'bundler'
+require 'rubygems'
+require 'bundler/setup'
 require 'rake/testtask'
 
 Bundler::GemHelper.install_tasks
 
-desc 'Run Errational unit tests.'
+desc 'Run Errational tests.'
 Rake::TestTask.new(:test) do |t|
   t.libs << 'lib'
   t.libs << 'test'
