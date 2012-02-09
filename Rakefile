@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'bundler/setup'
+require 'appraisal'
 require 'rake/testtask'
 
 Bundler::GemHelper.install_tasks
