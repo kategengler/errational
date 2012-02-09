@@ -4,6 +4,7 @@ require 'rake/testtask'
 
 Bundler::GemHelper.install_tasks
 
+task :default => :test
 desc 'Run Errational tests.'
 Rake::TestTask.new(:test) do |t|
   t.libs << 'lib'
