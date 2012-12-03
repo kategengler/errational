@@ -2,3 +2,4 @@ Gemfile.lock
 .bundle/
 tags
 test/tmp
+gemfiles/*.gemfile.lock

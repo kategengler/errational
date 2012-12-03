@@ -1,3 +1,3 @@
 module Errational
-  VERSION = "0.9.09"
+  VERSION = "0.9.20.pre"
 end

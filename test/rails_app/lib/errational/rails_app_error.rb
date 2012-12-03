@@ -43,6 +43,7 @@ module RailsAppError
   #Errors in this special module will be logged
   module Loggable
     HTML_MESSAGE = "A<br />message<br />with<br />html<br />!"
+    LOG_THIS = "This is a really bad error. Tell someone!"
   end
 
 
