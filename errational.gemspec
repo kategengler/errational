@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency('rails', '>=3.0.0')
   s.required_rubygems_version = Gem::Requirement.new('>= 1.8.10')
-  s.add_development_dependency('bundler', '~> 1.0')
+  s.add_development_dependency('bundler', '>= 1.0')
   s.add_development_dependency('mocha')
   s.add_development_dependency('appraisal', '>= 0.4.0')
 
