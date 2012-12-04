@@ -1,5 +1,7 @@
 # errational
 
+[![Build Status](https://travis-ci.org/kategengler/errational.png?branch=master)](https://travis-ci.org/kategengler/errational)
+
 Supports Rails 3 only
 
 ## Summary
