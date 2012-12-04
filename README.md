@@ -135,3 +135,7 @@ Errational.setup do |config|
   config.logger = Rails.logger
 end
 ```
+
+## Development
+
+Please run `rake appraisal:install` once, then use `rake appraisal` to judge whether the build will pass.
