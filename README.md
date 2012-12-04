@@ -1,13 +1,15 @@
-# errational
+# errational - nice error handling
 
 [![Build Status](https://travis-ci.org/kategengler/errational.png?branch=master)](https://travis-ci.org/kategengler/errational)
-
-Supports Rails 3 only
 
 ## Summary
 
 This gem will create custom Exception classes for your rails app,
 rescue from them whenever they are raised, and display a nice message to the user.
+
+## Requirements
+* Ruby 1.9+
+* Rails 3+
 
 ## Install
 
