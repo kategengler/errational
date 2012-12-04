@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
 
   s.rubyforge_project = "errational"
 
-  s.files         = `git ls-files`.split("\n")
+  s.files         = `git ls-files | grep -v \.gem$`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_paths = ["lib"]
 
