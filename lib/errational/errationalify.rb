@@ -76,7 +76,7 @@ module Errationalify
   end
 
   def self.included_in_constants?(mod, constant_name)
-    mod.constants.include? constant_name
+    mod.constants.map{|cons| cons.to_s}.include? constant_name
   end
 
   def self.modules_in(mod)

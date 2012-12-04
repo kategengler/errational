@@ -20,4 +20,9 @@ class ErrationalTest < ActiveSupport::TestCase
     end
   end
 
+  def test_included_in_constants_works_with_stringified_class_names
+    assert_equal true, Errationalify.included_in_constants?(Errational.exception_base, "General")
+    assert_equal false, Errationalify.included_in_constants?(Errational.exception_base, "Butter")
+  end
+
 end
