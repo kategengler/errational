@@ -22,4 +22,7 @@
 
 module RailsAppException
   include Errationalify
+
+  class LogThis < Loggable
+  end
 end

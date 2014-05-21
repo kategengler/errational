@@ -1,9 +1,11 @@
 require 'rails'
 require 'rails/generators'
 require 'active_support/dependencies'
-require 'errational/errationality'
 require 'errational/errationalify'
+require 'errational/errationality'
 require 'generators/errational/install_generator'
+
+require 'errational/railtie' if defined?(Rails::Railtie)
 
 module Errational
 
